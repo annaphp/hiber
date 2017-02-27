@@ -37,6 +37,7 @@ public class CookieRepository {
 	public Cookie findCookieById(Long id){
 		Session session = sessionFactory.openSession();
 		Cookie cookie = session.get(Cookie.class, id);
+		System.out.println(cookie.getBox());
 		session.close();
 		return cookie;
 	}
